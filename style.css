@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 128, 255);
+    padding: 20px 40px;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    color: white;
+    font-style: italic;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list a, ul{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    margin-left: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#btn-viajar::after {
+    content: "|";
+    margin-left: 30px;
+    color: white;
+}
+
+.nav-list a:hover {
+    color: rgba(255, 255, 255, 0.614);
+}
+
+.banner {
+    background-image: url("/images/airplane-bg3.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+}
