@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Viagens</title>
+    <link rel="stylesheet" href="style_viajar.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gerenciamento de Viagens</h1>
+    </header>
+
+    <main>
+        <h2>Cadastrar Nova Viagem</h2>
+        <form id="form-viagem">
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino" required>
+
+            <label for="data">Data da Viagem:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="tipo">Tipo de Viagem:</label>
+            <select id="tipo" name="tipo">
+                <option value="nacional">Nacional</option>
+                <option value="internacional">Internacional</option>
+            </select>
+
+            <label for="passaporte" style="display: none;">Possui Passaporte?</label>
+            <select id="passaporte" name="passaporte" style="display: none;">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+
+            <button type="submit">Cadastrar Viagem</button>
+        </form>
+
+        <h2>Lista de Viagens</h2>
+        <table id="tabela-viagens">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Destino</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Internacional</th>
+                    <th>Passaporte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Viagens serão listadas aqui via JavaScript futuramente -->
+            </tbody>
+        </table>
+
+        <div class="delete-section">
+            <h2>Excluir Viagem</h2>
+            <label for="id-excluir">ID da viagem a excluir:</label>
+            <input type="number" id="id-excluir" min="1">
+            <button onclick="excluirViagem()">Excluir</button>
+        </div>
+
+        <a href="index.html" id="voltar">Voltar para a página principal</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
